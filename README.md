@@ -8,7 +8,13 @@ Sensitivity Analysis is a numerical differentiation tool that improves the accur
 ### Installing with Pypi
 
 
-### Installing Directly from 
+### Installing Directly from Github
+1. Download SensitivityAnalysis. Click the green button at the top of this page that says "Code" and select "Download ZIP". Unzip the file into the desired working directory
+2. Navigate to the working directory
+3. Install the base dependencies. Run `pip install -r requirements.txt`.
+   - tellurium
+   - numpy
+4. Finally test the package using `python SensitivityAnalysisTest.py`. Once the setup is complete you will only need to open the terminal, navigate into the folder that contains the package.
 
 
 ### Usage
@@ -34,22 +40,15 @@ Steps to using:
    7. getuEE:
       - variable: a reaction (e.g. 'J1')
       - parameter: the independent parameter, for example a kinetic constant, floating or boundary species
+
 ### Terminology
 1. Control Coefficient: Describe how much influence a given reaction step has on a steady state flux or species concentration level
    1. Flux Control Coefficient: The frctionl change in flux brought a out by a given fractional change in enzyme (protein) concentration
    2. Concentration Control Coefficient: The fractional change in species concentration given a frctional change in enzyme (protein) concentration
-2. flux: steady state rate through a pathway
+2. Flux: steady state rate through a pathway
 3. Elasticity Coefficient: Also known as the kinetic order, or the derivative of the reaction rate with respect to the species concentration.
    - The fractional change in reaction rate in response to a fractional change in a given reactant or product while keeping all other reactants and products constant. 
    - For a species that increases reaction rate: Elasticity is positive
    - For a species that decreases reaction rate: Elasticity is negative
 5. Scaled: Unitless
 6. Unscaled: Contains units
-
-## Testing
-To test the functionality of the SensitivityAnalysis package:
-1. Ensure that SensitivityAnalysis.py and SensitivityAnalysisTest.py are both in the current working directory
-2. run the following command from your terminal ```python SensitivityAnalysisTest.py```
-   - Ensure that the output says that all tests have been passed
-
-## Contributing
