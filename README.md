@@ -1,8 +1,7 @@
-# SensitivityAnalysis
-Code for Sensitivity Analysis, computing the control coefficients and elasticity coefficients
+# SensitivityAnalysis: 
 
 ## Introduction
-Sensitivity Analysis is a numerical differentiation tool that improves the accuracy of computing the scaled and unscaled derivatives (Sensitivities/Control Coefficients/Elasticity Coefficients) of models built using Tellurium. These sensitivities are of interest in terms of modeling the effects of perturbations on steady state. 
+Sensitivity Analysis is an adaptive numerical differentiation tool that improves the accuracy of computing the scaled and unscaled derivatives (Sensitivities/Control Coefficients/Elasticity Coefficients) of models built using Tellurium. The algorithm is based off of the richardson extrapolation method. These sensitivities are of interest in terms of modeling the effects of perturbations on steady state. 
 
 ## Getting Started
 ### Installing with Pypi
@@ -43,8 +42,8 @@ Steps to using:
 
 ### Terminology
 1. Control Coefficient: Describe how much influence a given reaction step has on a steady state flux or species concentration level
-   1. Flux Control Coefficient: The frctionl change in flux brought a out by a given fractional change in enzyme (protein) concentration
-   2. Concentration Control Coefficient: The fractional change in species concentration given a frctional change in enzyme (protein) concentration
+   1. Flux Control Coefficient: The fractionl change in flux brought a out by a given fractional change in enzyme (protein) concentration
+   2. Concentration Control Coefficient: The fractional change in species concentration given a fractional change in enzyme (protein) concentration
 2. Flux: steady state rate through a pathway
 3. Elasticity Coefficient: Also known as the kinetic order, or the derivative of the reaction rate with respect to the species concentration.
    - The fractional change in reaction rate in response to a fractional change in a given reactant or product while keeping all other reactants and products constant. 
