@@ -35,6 +35,9 @@ extensions = [
 	'sphinx_rtd_theme',
 ]
 
+# Testing to use this conf.py
+master_doc = 'index'
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
