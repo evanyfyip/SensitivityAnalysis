@@ -33,10 +33,10 @@ Steps to using:
    3. getuCC: Returns the unscaled (flux/concentration) control coefficient with respect to a global parameter
       - variable: reaction or species concentration
       - parameter: kinetic constant or boundary species
-   5. getEE:
+   5. getEE: Returns the scaled elasticity coefficient with respect to a global parameter
       - variable: a reaction (e.g. 'J1')
       - parameter: the independent parameter, for example a kinetic constant, floating or boundary species
-   7. getuEE:
+   7. getuEE: Returns the unscaled elasticity coefficient with respect to a global parameter
       - variable: a reaction (e.g. 'J1')
       - parameter: the independent parameter, for example a kinetic constant, floating or boundary species
 
