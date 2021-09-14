@@ -4,9 +4,6 @@
 Sensitivity Analysis is an adaptive numerical differentiation tool that improves the accuracy of computing the scaled and unscaled derivatives (Sensitivities/Control Coefficients/Elasticity Coefficients) of models built using Tellurium. The algorithm is based off of the richardson extrapolation method. These sensitivities are of interest in terms of modeling the effects of perturbations on steady state. 
 
 ## Getting Started
-### Installing with Pypi
-
-
 ### Installing Directly from Github
 1. Download SensitivityAnalysis. Click the green button at the top of this page that says "Code" and select "Download ZIP". Unzip the file into the desired working directory
 2. Navigate to the working directory
