@@ -11,7 +11,7 @@ def getuCC(r, parameter, variable, initial_step_size=0.001, parameter_init="curr
     Newton's difference quotient ("OnePoint") or symmetric difference quotient ("TwoPoint")
     
     
-    Parameters:
+    Parameters
     -----------
     r : ExtendedRoadRunner object
         A roadrunner object representing a function or metabolic pathway
@@ -37,7 +37,7 @@ def getuCC(r, parameter, variable, initial_step_size=0.001, parameter_init="curr
 
 
     
-    Returns:
+    Returns
     --------
     deriv : float
         the value of the unscaled control coefficient
@@ -110,7 +110,7 @@ def getCC(r, parameter, variable, initial_step_size=0.001, parameter_init="curre
     Newton's difference quotient ("OnePoint") or symmetric difference quotient ("TwoPoint")
     
     
-    Parameters:
+    Parameters
     -----------
     r : ExtendedRoadRunner object
         A roadrunner object representing a function or metabolic pathway
@@ -136,7 +136,7 @@ def getCC(r, parameter, variable, initial_step_size=0.001, parameter_init="curre
 
 
     
-    Returns:
+    Returns
     --------
     deriv : float
         the value of the scaled control coefficient
@@ -251,7 +251,7 @@ def one_point_diff(r, parameter, variable, step, parameter_init):
     Returns the derivative of a function based on the one point
     numerical differentiation method. Also known as Newton's Difference Quotient
     
-    Parameters:
+    Parameters
     -----------
     r : An Extended RoadRunner object
     parameter : str
@@ -263,7 +263,7 @@ def one_point_diff(r, parameter, variable, step, parameter_init):
     parameter_init : a float
         Initial variable value to compute control coefficients for, set to "current" as default
     
-    Returns:
+    Returns
     --------
     deriv : double
         The one point derivative of the variable with respect to the parameter
@@ -291,13 +291,15 @@ def one_point_diff(r, parameter, variable, step, parameter_init):
 
 
 def two_point_diff(r, parameter, variable, step, parameter_init, output):
-    """Returns the derivative of a function based on the two point
+    """
+    Returns the derivative of a function based on the two point
     numerical differentiation method also known as the symmetric difference quotient. If output parameter
     is assigned to 'Points', then P1 and P2 are returned.
     
-    Parameters:
+    Parameters
     -----------
     r : An Extended RoadRunner object
+        A roadrunner object representing a function or metabolic pathway
     parameter : str
         The id of the independent parameter, for example a kinetic constant or boundary species
     variable : str
@@ -309,10 +311,12 @@ def two_point_diff(r, parameter, variable, step, parameter_init, output):
     output: str
         specifies the desired return output, "Points" or "Derivative"
     
-    Returns:
+    Returns
     --------
-    P1, P2 : double
-        The two perturbed points, P1 (f(x-h)) and P2 (f(x+h)).
+    P1 : double
+        The first perturbed point P1 (f(x-h))
+    P2 : double
+        The second perturbed point P2 (f(x+h)).
     deriv : double
         The one point derivative of the variable with respect to the parameter
     """
@@ -348,9 +352,10 @@ def five_point_diff(r, parameter, variable, step, parameter_init):
     Returns the derivative of a function based on the five point
     numerical differentiation method.
     
-    Parameters:
+    Parameters
     -----------
     r : An Extended RoadRunner object
+        A roadrunner object representing a function or metabolic pathway
     parameter : str
         The id of the independent parameter, for example a kinetic constant or boundary species
     variable : str
@@ -360,7 +365,7 @@ def five_point_diff(r, parameter, variable, step, parameter_init):
     parameter_init : a float
         Initial variable value to compute control coefficients for, set to "current" as default
     
-    Returns:
+    Returns
     --------
     deriv : double
         The one point derivative of the variable with respect to the parameter
@@ -395,10 +400,8 @@ def getuEE(r, parameter, variable, initial_step_size=0.001, parameter_init="curr
     
     Returns the derivative and estimated error values via the default method Richardson Extrapolation or alternatively
     Newton's difference quotient ("OnePoint") or symmetric difference quotient ("TwoPoint")
-    
-    
-    
-    Parameters:
+
+    Parameters
     -----------
     r : ExtendedRoadRunner object
         A roadrunner object representing a function or metabolic pathway
@@ -424,7 +427,7 @@ def getuEE(r, parameter, variable, initial_step_size=0.001, parameter_init="curr
 
 
     
-    Returns:
+    Returns
     --------
     deriv : float
         the value of the unscaled elasticity coefficient
@@ -498,7 +501,7 @@ def getEE(r, parameter, variable, initial_step_size=0.001, parameter_init="curre
     
     
     
-    Parameters:
+    Parameters
     -----------
     r : ExtendedRoadRunner object
         A roadrunner object representing a function or metabolic pathway
@@ -524,7 +527,7 @@ def getEE(r, parameter, variable, initial_step_size=0.001, parameter_init="curre
 
 
     
-    Returns:
+    Returns
     --------
     deriv : float
         the value of the scaled elasticity coefficient
@@ -637,16 +640,22 @@ def one_point_diff_EE(r, parameter, variable, step, parameter_init):
     Returns the derivative of a function based on the one point
     numerical differentiation method. Also known as Newton's Difference Quotient
     
-    Parameters:
+    Parameters
     -----------
-    r :
-    parameter : 
-    variable : 
-    step : 
-    parameter_init : 
+    r : An Extended RoadRunner object
+        A roadrunner object representing a function or metabolic pathway
+    parameter : str
+        The id of the independent parameter, for example a kinetic constant or boundary species
+    variable : str
+        The id of a dependent variable of the coefficient, for example a reaction or species concentration.
+    step : a float
+        The step size to use to compute Newton's difference quotient.
+    parameter_init : a float
+        Initial variable value to compute control coefficients for, set to "current" as default
     
-    Returns:
-    deriv : the derivative of the variable with respect to the parameter
+    Returns
+    deriv : double
+        the one point derivative of the variable with respect to the parameter
     """
     # Current state of variable
     P1 = r[variable]
@@ -666,17 +675,25 @@ def two_point_diff_EE(r, parameter, variable, step, parameter_init, output):
     numerical differentiation method also known as the symmetric difference quotient. If output parameter
     is assigned to 'Points', then P1 and P2 are returned.
     
-    Parameters:
+    Parameters
     -----------
-    r :
-    parameter : 
-    variable : 
-    step : 
-    parameter_init : 
-    Output : 
+    r : An Extended RoadRunner object
+        A roadrunner object representing a function or metabolic pathway
+    parameter : str
+        The id of the independent parameter, for example a kinetic constant or boundary species
+    variable : str
+        The id of a dependent variable of the coefficient, for example a reaction or species concentration.
+    step : a float
+        The step size to use to compute Newton's difference quotient.
+    parameter_init : a float
+        Initial variable value to compute control coefficients for, set to "current" as default
+    output: str
+        specifies the desired return output, "Points" or "Derivative"
     
-    Returns:
-    deriv : the derivative of the variable with respect to the parameter
+    Returns
+    --------
+    deriv : double
+        the two point derivative of the variable with respect to the parameter
     """
     # Perturbing the system backward
     r[parameter] = parameter_init - step
@@ -704,9 +721,10 @@ def five_point_diff_EE(r, parameter, variable, step, parameter_init):
     Returns the derivative of a function based on the five point
     numerical differentiation method.
     
-    Parameters:
+    Parameters
     -----------
     r : An Extended RoadRunner object
+        A roadrunner object representing a function or metabolic pathway
     parameter : str
         The id of the independent parameter, for example a kinetic constant or boundary species
     variable : str
@@ -716,10 +734,10 @@ def five_point_diff_EE(r, parameter, variable, step, parameter_init):
     parameter_init : a float
         Initial variable value to compute control coefficients for, set to "current" as default
     
-    Returns:
+    Returns
     --------
     deriv : double
-        The one point derivative of the variable with respect to the parameter
+        The five point derivative of the variable with respect to the parameter
     """
     # Get points P1 (f(x-2h)), P2 (f(x-h)), P3 (f(x)), P4 (f(x+h)), P5 (f(x+2h))
     variable_init = r[variable]
