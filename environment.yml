@@ -9,4 +9,5 @@ dependencies:
   - sphinx
   - pip:
     - sphinx-rtd-theme==0.5.2
+    - tellurium==2.2.0
 prefix: /Users/evan/opt/anaconda3/envs/SauroLab
