@@ -37,6 +37,9 @@ Steps to using:
       - variable: a reaction (e.g. 'J1')
       - parameter: the independent parameter, for example a kinetic constant, floating or boundary species
 
+### Documentation
+For the full documentation see: https://sensitivityanalysis.readthedocs.io/
+
 ### Terminology
 1. Control Coefficient: Describe how much influence a given reaction step has on a steady state flux or species concentration level
    1. Flux Control Coefficient: The fractionl change in flux brought a out by a given fractional change in enzyme (protein) concentration
