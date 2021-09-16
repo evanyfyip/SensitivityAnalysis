@@ -20,7 +20,7 @@ Sensitivity Analysis is an adaptive numerical differentiation tool that improves
    QuickStart
    Tutorial
    Reference
-   Support
+   support
 
 
 Indices and tables
