@@ -24,6 +24,7 @@ Some interesting things.
    QuickStart
    Tutorial
    Reference
+   Support
 
 
 Indices and tables
