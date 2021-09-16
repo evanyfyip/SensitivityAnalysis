@@ -13,10 +13,6 @@ University of Washington - Sauro Lab
 
 Sensitivity Analysis is an adaptive numerical differentiation tool that improves the accuracy of computing the scaled and unscaled derivatives (Sensitivities/Control Coefficients/Elasticity Coefficients) of models built using Tellurium. The algorithm is based off of the richardson extrapolation method. These sensitivities are of interest in terms of modeling the effects of perturbations on steady state.
 
-Another Header!
-===============
-Some interesting things.
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
