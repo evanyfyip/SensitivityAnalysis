@@ -42,7 +42,7 @@ For the full documentation see: https://sensitivityanalysis.readthedocs.io/
 
 ### Terminology
 1. Control Coefficient: Describe how much influence a given reaction step has on a steady state flux or species concentration level
-   1. Flux Control Coefficient: The fractionl change in flux brought a out by a given fractional change in enzyme (protein) concentration
+   1. Flux Control Coefficient: The fractional change in flux brought a out by a given fractional change in enzyme (protein) concentration
    2. Concentration Control Coefficient: The fractional change in species concentration given a fractional change in enzyme (protein) concentration
 2. Flux: steady state rate through a pathway
 3. Elasticity Coefficient: Also known as the kinetic order, or the derivative of the reaction rate with respect to the species concentration.
